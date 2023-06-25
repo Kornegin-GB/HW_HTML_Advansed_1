@@ -1,0 +1,442 @@
+@import "_vars.scss";
+@import "_visual.scss";
+@import "_mixin.scss";
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   font-family: "Lato", sans-serif;
+   font-size: 0px;
+}
+
+a {
+   text-decoration: none;
+}
+
+.center {
+   padding-left: calc(50% - 570px);
+   padding-right: calc(50% - 570px);
+}
+
+.header-link {
+   background: $color_black;
+   padding-top: 18px;
+   padding-bottom: 19px;
+   @include flex-center-between;
+}
+
+.left-nav {
+   gap: 40px;
+   @include flex-center;
+}
+
+.serch:hover path,
+.burger:hover path,
+.user:hover path,
+.shop:hover path {
+   fill: $color_pink;
+   transition: $transition;
+}
+
+.right-nav {
+   gap: 33px;
+   @include flex-center;
+}
+
+.header {
+   background: #f1e4e6;
+   gap: 64px;
+   position: relative;
+   @include flex-center;
+}
+
+.photo-header {
+   margin-left: -29%;
+}
+
+.box-title {
+   border-left: 12px solid $color_pink;
+   padding-left: 16px;
+}
+
+.selected-text {
+   color: $color_pink;
+}
+
+.title {
+   font-style: normal;
+   font-weight: $font-900;
+   font-size: 48px;
+   line-height: 58px;
+   color: $color_black;
+}
+
+.text-title {
+   font-style: normal;
+   font-weight: $font-700;
+   font-size: 32px;
+   line-height: 38px;
+   color: $color_black;
+}
+
+.offer {
+   margin-top: 71px;
+   margin-bottom: 96px;
+   display: grid;
+   grid-template-columns: repeat(3, 360px);
+   justify-content: center;
+   gap: 30px;
+   translate: transform;
+}
+
+.offer-img {
+   width: 100%;
+   filter: brightness(40%);
+}
+
+.offer-item {
+   position: relative;
+   transition: all 0.8s ease;
+}
+
+.offer-item:hover {
+   transform: translateY(-50px);
+}
+
+.offer-item-big:hover {
+   transform: translateY(0px);
+}
+
+.offer-item-big {
+   grid-column: span 3;
+}
+
+.text-offer {
+   position: absolute;
+   top: 40%;
+   width: 100%;
+   z-index: 1;
+}
+
+.text-title-offer {
+   font-style: normal;
+   font-weight: $font-400;
+   font-size: 16px;
+   line-height: 19px;
+   text-align: center;
+   color: $color_white;
+}
+
+.title-offer {
+   font-style: normal;
+   font-weight: $font-700;
+   font-size: 24px;
+   line-height: 29px;
+   text-align: center;
+   color: $color_pink;
+}
+
+.products {
+   text-align: center;
+}
+
+.products-wrap {
+   text-align: left;
+   display: grid;
+   grid-template-columns: repeat(3, 360px);
+   justify-content: center;
+   gap: 30px;
+}
+
+.subtitle-products {
+   font-style: normal;
+   font-weight: $font-400;
+   font-size: 30px;
+   line-height: 36px;
+   color: $color_black;
+   margin-bottom: 6px;
+}
+
+.text-products {
+   font-style: normal;
+   font-weight: $font-400;
+   font-size: 14px;
+   line-height: 17px;
+   color: #9f9f9f;
+   margin-bottom: 48px;
+}
+
+.add-cart-item {
+   position: relative;
+   display: block;
+}
+
+.add-cart {
+   top: 40%;
+   left: 30%;
+   padding: 10px 15px;
+   gap: 11px;
+   border: 1px solid $color_white;
+   align-items: center;
+   justify-content: center;
+   display: none;
+   z-index: 1;
+}
+
+.text-add-cart {
+   font-style: normal;
+   font-weight: $font-400;
+   font-size: 14px;
+   line-height: 17px;
+   color: $color_white;
+}
+
+.product-img {
+   width: 100%;
+   transition: $transition;
+}
+
+.product-img:hover {
+   filter: brightness(40%);
+}
+
+.add-cart-item:hover .add-cart {
+   position: absolute;
+   display: flex;
+}
+
+.products-item {
+   background: #f8f8f8;
+}
+
+.produt-info {
+   padding: 0 16px;
+   margin-top: 25px;
+   margin-bottom: 24px;
+}
+
+.product-title {
+   margin-bottom: 16px;
+   font-style: normal;
+   font-weight: $font-400;
+   font-size: 13px;
+   line-height: 16px;
+   color: $color_black;
+}
+
+.product-text {
+   font-style: normal;
+   font-weight: $font-300;
+   font-size: 14px;
+   line-height: 17px;
+   color: #5d5d5d;
+   margin-bottom: 16px;
+}
+
+.prise {
+   font-style: normal;
+   font-weight: $font-400;
+   font-size: 16px;
+   line-height: 19px;
+   color: $color_pink;
+}
+
+.button {
+   margin-top: 48px;
+   padding: 15px 39px;
+   font-style: normal;
+   font-weight: $font-400;
+   font-size: 16px;
+   line-height: 19px;
+   color: $color_pink;
+   border: 1px solid $color_pink;
+   background: none;
+   transition: $transition;
+}
+
+.button:hover {
+   color: $color_white;
+   background: $color_pink;
+}
+
+.feature {
+   margin-top: 95px;
+   background: $color_black;
+   padding-top: 104px;
+   padding-bottom: 104px;
+   display: grid;
+   grid-template-columns: repeat(3, 360px);
+   gap: 30px;
+   text-align: center;
+   justify-content: center;
+}
+
+.item {
+   padding-left: 13px;
+   padding-right: 13px;
+   animation: wobble-hor-top 3s both;
+   animation-iteration-count: infinite;
+}
+
+.item-title {
+   margin-top: 22px;
+   font-style: normal;
+   font-weight: $font-400;
+   font-size: 19.96px;
+   line-height: 24px;
+   color: $color_white;
+}
+
+.item-text {
+   margin-top: 14px;
+   font-style: normal;
+   font-weight: $font-300;
+   font-size: 13.972px;
+   line-height: 17px;
+   text-align: center;
+   color: $color_white;
+}
+
+.subscribe {
+   position: relative;
+   padding-top: 97px;
+   padding-bottom: 126px;
+   @include flex-center-between;
+}
+
+.subscribe {
+   background-image: url(../img/photo-subscribe.jpg);
+   background-position: bottom;
+   background-size: cover;
+}
+
+.fon-filter {
+   background: rgba(244, 244, 244, 0.7);
+   position: absolute;
+   left: 0%;
+   right: 0%;
+   top: 0%;
+   bottom: 0%;
+   z-index: 1;
+}
+
+.sey-item {
+   width: 360px;
+   text-align: center;
+   z-index: 2;
+}
+
+.sey-text {
+   margin-top: 30px;
+   font-style: normal;
+   font-weight: $font-400;
+   font-size: 20px;
+   line-height: 24px;
+   text-align: center;
+   color: $color_black;
+}
+
+.form-blok {
+   z-index: 2;
+}
+
+.sey-italic {
+   font-style: italic;
+}
+
+.form-title {
+   font-style: normal;
+   font-weight: $font-700;
+   font-size: 24px;
+   line-height: 167.2%;
+   text-align: center;
+   color: $color_black;
+}
+
+.form-text {
+   font-style: normal;
+   font-weight: $font-400;
+   font-size: 18px;
+   line-height: 167.2%;
+   text-align: center;
+   color: $color_black;
+}
+
+.input-email {
+   margin-top: 32px;
+   @include flex-center;
+}
+
+.email {
+   border-top-left-radius: 22px;
+   border-bottom-left-radius: 22px;
+   height: 49px;
+   width: 256px;
+   background: #e1e1e1;
+   border: none;
+   font-style: normal;
+   font-weight: $font-400;
+   font-size: 14px;
+   line-height: 17px;
+   display: flex;
+   align-items: center;
+   color: $color_black;
+   padding-left: 22px;
+   opacity: 0.67;
+}
+
+.button-form {
+   border: none;
+   width: 100px;
+   height: 49px;
+   border-top-right-radius: 22px;
+   border-bottom-right-radius: 22px;
+   background: $color_pink;
+   font-style: normal;
+   font-weight: $font-400;
+   font-size: 14px;
+   line-height: 17px;
+   color: $color_white;
+   transition: $transition;
+   @include flex-center;
+}
+
+.button-form:hover {
+   background: $color_white;
+   color: $color_pink;
+}
+
+.copyright {
+   padding-top: 30px;
+   padding-bottom: 30px;
+   background: $color_black;
+   @include flex-center-between;
+}
+
+.copy {
+   font-style: normal;
+   font-weight: $font-400;
+   font-size: 16px;
+   line-height: 19px;
+   color: $color_white;
+}
+
+.icon {
+   display: flex;
+   gap: 8px;
+}
+
+.img-svg:hover .fon-svg {
+   fill: $color_pink;
+   transition: $transition;
+}
+
+.img-svg:hover path {
+   fill: $color_white;
+   transition: $transition;
+}
+
+@import "_media.scss";

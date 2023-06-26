@@ -502,6 +502,7 @@ a {
   color: #222222;
   padding-left: 22px;
   opacity: 0.67;
+  outline: none;
 }
 
 .button-form {

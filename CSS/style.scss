@@ -199,13 +199,14 @@ a {
    transition: $transition;
 }
 
-.product-img:hover {
-   filter: brightness(40%);
-}
-
-.add-cart-item:hover .add-cart {
-   position: absolute;
-   display: flex;
+.add-cart-item:hover {
+   & .product-img {
+      filter: brightness(40%);
+   }
+   & .add-cart {
+      position: absolute;
+      display: flex;
+   }
 }
 
 .products-item {

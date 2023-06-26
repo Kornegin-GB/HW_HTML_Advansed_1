@@ -72,7 +72,8 @@ a {
 
 .link::after {
    content: "/\00a0";
-   padding: 3px;
+   padding-left: 15px;
+   padding-right: 10px;
 }
 
 .nav-link :last-child .link::after {
@@ -114,14 +115,126 @@ a {
    transition: $transition;
 }
 
-.products {
+//--------------------start
+
+.product-info-wrap {
+   position: relative;
    text-align: center;
+   min-height: 600px;
 }
 
-//TODO: отсюда писать текст стилей
+.wrap-blok {
+   background: $color_white;
+   position: absolute;
+   top: -65px;
+   border: 1px solid #eaeaea;
+   width: fit-content;
+   padding: 65px 250px;
+}
+
+.title-product {
+   color: $color_pink;
+   font-size: 14px;
+   font-weight: $font-300;
+}
+
+.line-red {
+   margin-top: 12px;
+   margin-bottom: 12px;
+   width: 63px;
+   margin-left: auto;
+   margin-right: auto;
+   border-top: none;
+   border: 2px solid $color_pink;
+}
+
+.subtitle-product {
+   color: #4d4d4d;
+   font-size: 18px;
+   font-weight: $font-300;
+   margin-bottom: 48px;
+}
+
+.text-product {
+   color: #5e5e5e;
+   font-size: 14px;
+   font-weight: $font-300;
+}
+
+.prise-product {
+   margin-top: 32px;
+   font-size: 24px;
+   color: $color_pink;
+   font-weight: $font-300;
+}
+
+.line {
+   margin: 65px auto;
+   border: 1px solid #eaeaea;
+}
+
+.setting-menu {
+   font-size: 14px;
+   color: #6f6e6e;
+   @include flex-center;
+   gap: 42px;
+   margin-bottom: 49px;
+}
+
+.arrow-bottom {
+   display: flex;
+   gap: 9px;
+   align-items: flex-end;
+   & path {
+      fill: #6f6e6e;
+   }
+}
+
+.arrow-bottom:hover {
+   & path {
+      fill: $color_pink;
+      transition: $transition;
+   }
+}
+
+.button {
+   padding: 15px 39px;
+   font-style: normal;
+   font-weight: $font-400;
+   font-size: 16px;
+   line-height: 19px;
+   color: $color_pink;
+   border: 1px solid $color_pink;
+   background: none;
+   transition: $transition;
+}
+
+.wrap-bottom {
+   display: flex;
+   align-items: center;
+}
+
+.img-shop {
+   padding-right: 23px;
+}
+
+.img-shop path {
+   fill: $color_pink;
+   transition: $transition;
+}
+
+.button:hover {
+   color: $color_white;
+   background: $color_pink;
+   & path {
+      fill: $color_white;
+   }
+}
+
+//--------------------end
 
 .products-wrap {
-   margin-top: 128px;
+   margin-top: 63px;
    margin-bottom: 128px;
    text-align: left;
    display: grid;
@@ -160,13 +273,14 @@ a {
    transition: $transition;
 }
 
-.product-img:hover {
-   filter: brightness(40%);
-}
-
-.add-cart-item:hover .add-cart {
-   position: absolute;
-   display: flex;
+.add-cart-item:hover {
+   & .product-img {
+      filter: brightness(40%);
+   }
+   & .add-cart {
+      position: absolute;
+      display: flex;
+   }
 }
 
 .products-item {

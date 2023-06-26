@@ -310,11 +310,10 @@ a {
   transition: all 0.3s ease;
 }
 
-.product-img:hover {
+.add-cart-item:hover .product-img {
   -webkit-filter: brightness(40%);
           filter: brightness(40%);
 }
-
 .add-cart-item:hover .add-cart {
   position: absolute;
   display: -webkit-box;
